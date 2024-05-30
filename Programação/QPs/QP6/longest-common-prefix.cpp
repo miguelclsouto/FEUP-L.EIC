@@ -13,7 +13,7 @@ string longest_prefix(const vector<string>& v)
 
        for(int j = 0; j < static_cast<int>(v[i].size()); j++)
        {
-            if(!(j < static_cast<int>(longpref.size()) && longpref[j] == v[i][j]))
+            if(!(j < static_cast<int>(longpref.size()) && longpref[j] == v[i][j])) // if (j >= static_cast<int>(longpref.size()) || longpref[j] != v[i][j])
             {
                 // entao vou querer atualizar o longest prefix
                 longpref = longpref.substr(0, j); // a length e j;

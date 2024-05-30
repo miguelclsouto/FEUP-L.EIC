@@ -17,8 +17,8 @@ Point::Point(int x, int y)
 
 Point::Point(const Point& point)
 {
-    this->x = point.x;
-    this->y = point.y;
+    this->x = point.get_x();
+    this->y = point.get_y();
 }
 
 int Point::get_x() const
@@ -38,13 +38,13 @@ float Point::Distance(const Point& p) const
 
 bool Point::operator==(const Point& point) const
 {
-    return this->x == point.x && this->y == point.y;
+    return this->x == point.get_x() && this->y == point.get_y();
 }
 
 Point& Point::operator=(const Point& point)
 {
-    this->x = point.x;
-    this->y = point.y;
+    this->x = point.get_x();
+    this->y = point.get_y();
 
     return *this;
 }
